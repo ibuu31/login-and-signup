@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'package:login_signup/screens/home_screen.dart';
+import 'package:login_signup/screens/welcome_screen.dart';
+import 'package:login_signup/screens/login_screen.dart';
+import 'package:login_signup/screens/registration_screen.dart';
+
+void main() => runApp(FlashChat());
+
+class FlashChat extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      initialRoute: WelcomeScreen.id,
+      routes: {
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        HomeScreen.id: (context) => HomeScreen(),
+        RegistrationScreen.id: (context) => RegistrationScreen(),
+        // ChatScreen.id: (context) => ChatScreen(),
+      },
+    );
+  }
+}
